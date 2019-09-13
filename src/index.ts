@@ -7,11 +7,8 @@ const mockResponse = {
   bar: 'foo',
 };
 
-const chirp = (yo: number): void => {
-  const a = 2 - yo;
-
-  const b = 5 + yo;
-  console.log(yo);
+const chirp = (note: string): void => {
+  console.log(note);
 };
 
 app.get('/api', (req, res) => {
@@ -19,9 +16,7 @@ app.get('/api', (req, res) => {
   res.send(mockResponse);
 });
 app.get('/', (req, res) => {
-  const arr = 'f';
-  chirp(arr);
-  console.log('yo');
+  chirp('Hello World');
   res.send(mockResponse);
 });
 app.listen(port, function() {

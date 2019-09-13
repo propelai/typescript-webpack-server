@@ -1,7 +1,7 @@
 const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 const NodemonPlugin = require('nodemon-webpack-plugin');
-// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 module.exports = {
   target: 'node',
   entry: './src/index.ts',
@@ -21,9 +21,6 @@ module.exports = {
           'babel-loader',
           {
             loader: 'ts-loader',
-            // options: {
-            //   transpileOnly: true,
-            // },
           },
           'eslint-loader',
         ],
@@ -32,13 +29,12 @@ module.exports = {
   },
   plugins: [
     new NodemonPlugin({
-      // ignore: ['src'],
+      ignore: ['src'],
       watch: path.resolve('./build/index.js'),
-      verbose: true,
+      // verbose: true,
       events: {
-        exit: 'node -e \'process.exit()\'',
+        'start': 'clear',
       },
     }),
-    // new ForkTsCheckerWebpackPlugin(),
   ],
 };
