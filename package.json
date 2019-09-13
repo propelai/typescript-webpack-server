@@ -1,5 +1,5 @@
 {
-  "name": "typescript-babel-webpack-server",
+  "name": "typescript-webpack-server",
   "scripts": {
     "run": "nodemon build/main.js",
     "start": "node build",
@@ -10,17 +10,10 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/preset-typescript": "^7.6.0",
     "@types/express": "^4.17.1",
     "@types/node": "^12.7.5",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
-    "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
     "concurrently": "^4.1.2",
     "eslint": "^6.3.0",
     "eslint-config-prettier": "^6.3.0",
